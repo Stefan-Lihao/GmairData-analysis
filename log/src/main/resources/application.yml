@@ -1,0 +1,23 @@
+server:
+  port: 9904
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: log
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9900/eureka/
+
+spring:
+  application:
+    name: log-agent  #表示微服务的名称
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: false
+  data:
+    mongodb:
+      # uri: mongodb://localhost:27017/gmair
+      host: localhost
+      port: 27017
+      database: gmair
